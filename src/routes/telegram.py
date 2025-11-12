@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/webhook", tags=["telegram"])
 
 
-@router.post("/{token:path}")
+@router.post("/{token:path}/")
 async def telegram_webhook(
     token: str,
     request: Request,
